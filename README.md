@@ -22,7 +22,7 @@ This script post-processes **Delft3D-4** accumulated seabed flux output to gener
 | 3    | Minimum                    | Minimum flux value                                                                        |                                                         |
 | 4    | Maximum                    | Maximum flux value                                                                        |                                                         |
 | 5    | Median                     | Median flux value                                                                         |                                                         |
-| 6    | Trimmed mean (ASF core)    | Mean over the interquartile range (25–75 %); returns both trimmed mean and counts `N_trim` | Needed for ASF when combined with `analysis = 6`       |
+| 6    | **Trimmed mean (ASF core)**    | Mean over the interquartile range (25–75 %); returns both trimmed mean and counts `N_trim` | Needed for ASF when combined with `analysis = 6`       |
 | 7    | 75th percentile            | 75th percentile of flux values                                                           |                                                         |
 | 8    | Exceedance mean            | Mean of values above the `exceed_pct` percentile                                         | Uses `exceed_pct` (default 25 %)                       |
 | 9    | BSS-conditioned mean       | Mean of flux values at times when BSS exceeds its `exceed_pct` percentile                | Requires BSS file with matching time dimension         |
@@ -39,7 +39,7 @@ This script post-processes **Delft3D-4** accumulated seabed flux output to gener
 | 3          | Negative only                | Uses only the negative (erosional, absolute value) statistic                                              |                                                                   |
 | 4          | Residual depositional flux   | Positive − negative; negative values clipped to 0 (emphasises net deposition)                             | Requires both pos and neg stats (analyses 1–6)                    |
 | 5          | Geometric-mean transport     | √(pos · neg), with small epsilon; emphasises co-occurrence of deposition and erosion                      | Requires both pos and neg stats                                  |
-| 6          | Total transport / ASF        | If `op = 6` and `N_trim` available: ASF = μ⁺·N⁺ + μ⁻·N⁻; otherwise total = |pos| + |neg|                  | ASF configuration is `op = 6`, `analysis = 6`                     |
+| 6          | **Total transport / ASF**        | If `op = 6` and `N_trim` available: ASF = μ⁺·N⁺ + μ⁻·N⁻; otherwise total = pos + neg                  | ASF configuration is `op = 6`, `analysis = 6`                     |
 | 7          | Cumulative flux ratio (CFR)  | Ratio of positive to negative statistics minus 1, i.e. CFR − 1, computed from sign-separated flux fields | Uses only CFR branch in `operate_mat` (choice = 3)                |
 
 
@@ -47,7 +47,7 @@ This script post-processes **Delft3D-4** accumulated seabed flux output to gener
 
 | Purpose                             | Recommended setting                  | Comment                                             |
 |-------------------------------------|--------------------------------------|-----------------------------------------------------|
-| ASF sediment distribution (default) | `op = 6`, `analysis = 6`            | Central, frequency-weighted gross exchange per grain|
+| **ASF sediment distribution (default)** | `op = 6`, `analysis = 6`            | Central, frequency-weighted gross exchange per grain|
 | Simple depositional intensity       | `op = 1,2,5,7`, `analysis = 2`      | Positive flux only                                  |
 | Simple erosional intensity          | `op = 1,2,5,7`, `analysis = 3`      | Negative flux only (absolute values)                |
 | Net residual deposition             | `op = 1 or 6`, `analysis = 4`       | Highlights areas of persistent deposition           |
