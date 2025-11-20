@@ -7,6 +7,14 @@ Required files
 Optional files 
     - Bed shear stress map files from Delft3D-4 output (.mat file = v7.3/hdf5)
 
+Expected outputs:
+    *um.xyz , *_perc_*.xyz, *_bl.xyz and D50_*.xyz
+    
+    Normalized flux files of relative avaialbility
+    normalised for percentage of avaialbility 
+    normalised between 0 and 1 
+    and D50 for each grid cell
+
 
 Notes: 
 
