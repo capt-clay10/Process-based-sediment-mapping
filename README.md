@@ -45,12 +45,12 @@ This script post-processes **Delft3D-4** accumulated seabed flux output to gener
 
 ### Recommended combinations
 
-| Purpose                             | Recommended setting                  | Comment                                             |
-|-------------------------------------|--------------------------------------|-----------------------------------------------------|
+| Purpose                                 | Recommended setting                 | Comment                                             |
+|-----------------------------------------|-------------------------------------|-----------------------------------------------------|
 | **ASF sediment distribution (default)** | `op = 6`, `analysis = 6`            | Central, frequency-weighted gross exchange per grain|
-| Simple depositional intensity       | `op = 1,2,5,7`, `analysis = 2`      | Positive flux only                                  |
-| Simple erosional intensity          | `op = 1,2,5,7`, `analysis = 3`      | Negative flux only (absolute values)                |
-| Net residual deposition             | `op = 1 or 6`, `analysis = 4`       | Highlights areas of persistent deposition           |
-| CFR diagnostics                     | `op = 1–9`, `analysis = 7`          | Different `op` give different CFR summaries         |
+| Simple depositional intensity           | `op = 1,2,5,7`, `analysis = 2`      | Deposition (Positive) flux only                     |
+| Simple erosional intensity              | `op = 1,2,5,7`, `analysis = 3`      | Erosion (Negative) flux only (absolute values)      |
+| Net residual deposition                 | `op = 1 or 6`, `analysis = 4`       | Highlights areas of persistent deposition           |
+| CFR diagnostics                         | `op = 1–9`, `analysis = 7`          | Different `op` give different CFR summaries         |
 
 
