@@ -37,6 +37,10 @@ Sediment distribution maps are commonly produced by interpolating grab samples. 
 
 The method produces a **relative seabed sediment distribution**, not a morphodynamic forecast. It is best interpreted as a process-based map of dynamically active surface sediment fractions for the simulated forcing period. In simple words, the method shows you where a sediment could exist based on its mobility under governing conditions.
 
+<img width="1519" height="590" alt="Image" src="https://github.com/user-attachments/assets/1706c8a8-15c2-4b6b-8d02-091145925854" />
+
+Graphical abstract from Soares et al. (2026)
+
 ---
 
 ## What the script does
